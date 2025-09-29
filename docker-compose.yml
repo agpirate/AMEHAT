@@ -1,0 +1,105 @@
+version: '3.8'
+
+services:
+  # Frontend service
+  frontend:
+    build: 
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app # Live code sync
+      - /app/node_modules  # Keep node_modules in container
+    environment:
+      - NODE_ENV=development
+      - REACT_APP_API_URL=http://backend:3001
+    depends_on:
+      - backend
+
+  # Backend API service  
+  backend:
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3001"
+    environment:
+      - DATABASE_URL=postgres://user:pass@database:5432/myapp
+    depends_on:
+      - database
+
+  # Database service
+  database:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: myapp
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pass
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  postgres_data:
+
+
+# yml - is more managed way of runing the (DOCKERFile's commands) - in a single command.
+# It can run multiple services (containers) together - with inter-dependencies.
+# It can also manage volumes, networks, env variables etc.
+
+# Start - docker-compose commands 
+# docker-compose up services1 service2 ... //if no service mentioned, all services will start
+
+# Start - docker-compose commands -- for prod/dev - dockerFile mode specific
+# docker-compose -f docker-compose.dev.yml up # for dev
+# docker-compose -f docker-compose.prod.yml up # for prod
+
+
+# # Morning - Start working
+# Start services
+# git clone /projects/my-app
+# cd /projects/my-app
+# docker-compose up              # Start with logs
+# docker-compose up -d           # Start in background
+
+# # Make code changes
+# code src/components/Button.tsx
+# # Changes automatically appear in running app
+
+# # Run tests
+# docker-compose exec frontend npm test
+# # Check logs
+# docker-compose logs frontend
+
+# # Stop services
+# docker-compose down           # Stop and remove containers
+# docker-compose stop           # Stop but keep containers
+
+# # Manage services
+# docker-compose ps             # Show running containers
+# docker-compose logs           # Show all logs
+# docker-compose logs frontend  # Show specific service logs
+
+# # Execute commands in containers
+# docker-compose exec frontend npm test
+# docker-compose exec database psql -U user
+
+# # Build images
+# docker-compose build          # Rebuild images
+# docker-compose build --no-cache  # Force rebuild
+
+
+# # See what's running
+# docker-compose ps
+
+# # Check service health
+# docker-compose logs --follow
+# docker-compose exec frontend curl http://localhost:3000/health
+
+# # Resource usage
+# docker stats
+
+# # Clean up if needed
+# docker-compose down && docker system prune

@@ -1,0 +1,69 @@
+{
+    "welcome": "Wellcome to TMMApp",
+    "tmma":"TMMA",
+    "categories": {
+      "news": "News",
+      "sports": "Sports"
+    },
+    "userGreeting": "Hello, {{name}}!",
+    "pluralExample": {
+      "one": "You have {{count}} message",
+      "other": "You have {{count}} messages"
+    },
+
+
+    "about": "About",
+    "help": "Help",
+    "contact": "Contact",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "language": "Language",
+    "feedback": "Feedback",
+    "notifications": "Notifications",
+    "search": "Search",
+    "favorites": "Favorites",
+    "share": "Share",
+    "logout": "Logout",
+    "login": "Login",
+    "register": "Register",
+    "profile": "Profile",
+    "home": "Home",
+
+    "news": "News",
+    "tv": "TV",
+    "more": "More",
+
+    "by":"By",
+    "related":"related",
+    "visit":"visit",
+
+    "unknown":"unknown",
+
+    "Streaming since":"Streaming since",
+
+    "timeUnits": {
+      "hours": "hours",
+      "hour": "hour",
+      "minutes": "minutes",
+      "minute": "minute",
+      "seconds": "seconds",
+      "second": "second",
+      "days":"days",
+      "day":"day",
+      "weeks":"weeks",
+      "week":"week",
+      "months":"months",
+      "month":"month",
+      "year":"year",
+      "years":"years"
+      
+    },
+    "timeSuffix": {
+      "ago": "ago"
+    },
+
+    "meta": {
+    "last_updated": "2023-07-20",
+    "author": "Translation Team"
+  }
+  }

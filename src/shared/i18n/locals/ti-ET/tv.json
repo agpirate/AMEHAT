@@ -1,0 +1,72 @@
+{
+   "home":"home",
+
+   "featured":"ሓደሽቲ",
+
+   "tigrai-tv":"ቲቪ",
+   "tigrai tv":"ቲቪ",
+   "Tigrai Tv":"ቲቪ",
+   "Tigrai tv":"ቲቪ",
+
+"news":"ዜና",
+   "program":"መደብ",
+   "programs":"መደባት",
+   "Programs":"መደባት",
+   "documentary":"ዶክመንታሪ",
+
+
+  "kolahta":"ቖላሕታ",
+  "Meadi hasabat":"መኣዲ ሓሳባት",
+  "Zaeba lomi":"ዛዕባ ሎሚ",
+  "Wegei klte weldo":"ወግዒ ክልተ ወለዶ ",
+  "Wegei klte weledo":"ወግዒ ክልተ ወለዶ ",
+  "Tigrai entay tmhar":"ትግራይ እንታይ ትምሃር",
+  "Tigrai seb alewa":"ትግራይ ሰብ ኣለዋ",
+  "Medeb t'ena":"መደብ ጥዕና",
+  "Shsay gedenana":"ሽሻይ ገደናና",
+  "shshay gedenana":"ሽሻይ ገደናና",
+  "Shshay gedenana":"ሽሻይ ገደናና",
+  "Medaib":"መዳይብ",
+  "Medeb htsanat":"መደብ ህፃናት",
+
+   "fact-check":"ዘጣለልናዮ ሓቒ",
+
+  "Lehay":"ለሃይ",
+  "Meadi tbeb":"መኣዲ ጥበብ",
+  "Gezm senbet":"ግዕዝም ሰንበት",
+  "Wezbi":"ወዝቢ",
+  "Teamot":"ጠዓሞት",
+  "Engdot derfi":"እንግዶት ደርፊ",
+  "Wedi romit show":"ወዲ ሮሚጥ ሾው",
+  "Ziema yared":"ዜማ ያሬድ",
+  "Afrna show":"ኣፍሪና ሾው",
+  "Enda thsh":"እንዳ ትሕሽ",
+
+   "life-style":"መነባብሮ",
+   "lifestyle":"መነባብሮ",
+   "Health":"ጥዕና",
+   "food":"ኣመጋግባን",
+   "foods":"ኣመጋግባን",
+   "Travel":"ሌላ",
+   "Food And Nutrition":"ኣመጋግባ",
+   "Foods And Nutrition":"ኣመጋግባ",
+   "Foods and Nutrition":"ኣመጋግባ",
+
+   "economy":"ኢኮኖሚይ",
+   "business":"ቢዝነስ",
+
+   "culture":"ባህሊ",
+   "politics":"ፖሊቲክስ",
+
+   "technology":"ቴክኖሎጂ",
+   "Entertainment":"መዘናግዒ",
+   "entertainment":"መዘናግዒ",
+   "Documentary":"ዶክመንተሪ",
+
+   "sci-tech":"ሳይነስን ቴክኖሎጂ",
+
+    "_meta": {
+    "last_updated": "2023-07-20",
+    "author": "Translation Team"
+  }
+  }

@@ -1,0 +1,149 @@
+import styleWrap from "../../../shared/hooks/styleWrap.js"
+// const {boxStyles,borderStyle,radiusStyles,bgcStyles,fontStyles,flexSizes,flexStyles} = styleWrap()
+
+import AnimatedScrollView from '../../../shared/components/scrollViews/AnimatedScrollView'
+import { usePageSettings } from '../../../shared/contexts/pageSettingsProvider';
+
+import React, { useState,useContext,useRef,useEffect } from 'react';
+import { useMemo } from 'react';
+import { useFocusEffect } from '@react-navigation/native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { useTranslation } from 'react-i18next';
+import { StackScreenProps } from '@react-navigation/stack';
+
+// import { useNavigation } from '@react-navigation/native';
+// import { GoogleSignin } from '@react-native-google-signin/google-signin';
+
+// custome contexts hooks
+import {useNewsStore} from "../stores/store"
+import { ROUTES,RootStackParamList } from '../../../core/routes/config/route';
+
+
+
+// components
+import {CategoryOptions} from '../components/menus/CategoryOptions'
+import { renderLatestComponent,renderCategoryComponent } from '../components/screens/utils/renderer/renderFeatured';
+
+
+//utils
+type HomeScreenProps = StackScreenProps<RootStackParamList,typeof ROUTES.MAIN_TAB.RADIO.LIST.LATEST>;
+
+const RouteScreen = ({ navigation,route }:HomeScreenProps) => {
+
+ const {  
+    schema,
+
+    modelGroups,
+featuredGroupOption,
+
+    items,
+    // latestNews,
+    featuredItems,
+    
+    operation, //{type:'fetch',status:'idle',error:''}
+    suboperation,//{fetch:'home',...}
+    active, //{type:'create',draft,error}
+
+setClientSettingQFilters,
+setclientFeaturedGroupQFilters,
+fetchFeaturedGroupData,
+    setclientGroupQFilters,
+    
+    setFilter,
+    fetchItems,
+
+    startFetchOperation,
+    removeClientSettingQFilters,
+    removeclientFeaturedGroupQFilters,
+
+    startFeaturedFetchOperation,
+    startDetailsOperation,
+    fetchFeaturedData,
+   }  = useNewsStore()
+   
+  const { pageSettingComputor,pageSetting } = usePageSettings();
+
+const { t } = useTranslation();
+
+const {boxStyles,borderStyle,radiusStyles,bgcStyles,fontStyles,flexSizes,flexStyles} = styleWrap()
+
+      
+  const onPressItem = (
+    index: number,item:any
+  ): void => {
+    if(!(item && item.id)) return;
+    startDetailsOperation({ index, id:(item.id ?? null) }, null);
+    setclientFeaturedGroupQFilters('category',[item.category])     
+    navigateTo(ROUTES.MAIN_TAB.RADIO.DETAIL,{cat:item?.category ?? 'News'})
+  };
+  
+  const onPressCategoryFeatureItems = (
+    index: number,item:any
+  ): void => {
+    if(!(item && item.id)) return;
+    startDetailsOperation({ index, id:(item.id) }, null);
+    setclientFeaturedGroupQFilters('category',[item.category])     
+    navigateTo(ROUTES.MAIN_TAB.RADIO.DETAIL,{cat:item?.category ?? 'news'})
+  };
+
+    
+    const navigateTo =(path :string,params ={cat:''}) =>{
+      let title = params.cat//t(`news:${params.cat}`)
+      if(path == ROUTES.MAIN_TAB.RADIO.DETAIL) navigation.push(ROUTES.MAIN_TAB.RADIO.DETAIL, {id:'',source:'',highlight:true,title})
+      else if ( path == ROUTES.MAIN_TAB.RADIO.LIST.LATEST) onRetry()
+      else   navigation.push(ROUTES.MAIN_TAB.RADIO.LIST.GROUP_CATEGORY,{categoryId:params.cat,categoryName:params.cat})
+      return;
+    }
+  
+  //home loading.... 
+  const onRetry = React.useCallback(() => {
+    //put new filtering
+    startFetchOperation({key: 'category', value: 'Stream'}, null);
+    // fetchItems() //fetch filtering ++ global setting
+    //put featured groupName and it's value 
+    setclientFeaturedGroupQFilters('category',featuredGroupOption['category'] as string[]) 
+    // fetchFeaturedGroupData();//fetch featured filter ++ global setting
+    fetchFeaturedData() //fetchItems ++  fetchFeaturedGroupData
+  }, []);
+
+  // Use in both useFocusEffect and refresh button
+  useFocusEffect(
+    React.useCallback(() => {onRetry();}, [])
+  );
+  
+  return (
+
+  <SafeAreaView style={[boxStyles.boxStyle_flat,{flex:1}]}> 
+
+  {/* Menus */}
+  {(pageSetting['scrollYEvent'] < 55) ?  <CategoryOptions navigateTo={navigateTo}   /> :  null}
+ 
+
+  {/* Main Screen   */}
+        <AnimatedScrollView title='latest'  > 
+          
+          {/* Featured - Latest */}
+          {renderLatestComponent(   
+          {status: (operation.status ?? 'loading'),payloadParams: items,
+            actions: {onPressItem:onPressItem,onRetry}
+          } 
+          )}
+          
+          {renderCategoryComponent(   
+          {status: (operation.status ?? 'loading'),payloadParams: featuredItems['category'],
+            actions: {onPressItem:onPressCategoryFeatureItems,onRetry }
+          } 
+          )}
+
+          
+          {/* {for Name ...  // for name } */}
+        </AnimatedScrollView>
+
+      
+    </SafeAreaView>
+  );
+};
+
+
+
+export default RouteScreen;

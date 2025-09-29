@@ -1,0 +1,33 @@
+ROUTE SYSTEM ARCHITECTURE
+│
+├── SCHEME & DOMAIN
+│   ├── APP_SCHEME: 'myapp://'
+│   └── WEB_URL: 'https://myapp.com'
+│
+├── ROUTE NAMES (Logical IDs)
+│   ├── WELLCOM(GATEWAY)
+│   │   ├── WELLCOME: 'AuthLogin'
+│   │   └── RESET_PASSWORD: 'AuthResetPassword'
+│   ├── AUTH(GATEWAY)
+│   │   ├── LOGIN: 'AuthLogin'
+│   │   └── RESET_PASSWORD: 'AuthResetPassword'
+│   │
+│   ├── MAIN_TAB
+│   │   ├── NEWS(GATEWAY)
+│   │   │   ├── LIST ( GATEWAY)  //navigation.push/replace('Details'), navigation.goBack().
+│   │   │   │   ├── LATEST: 'NewsLatestList' //navigation.navigate('HomeTab', { screen: 'Details' }) ( jump to stackName,screenName..)
+│   │   │   │   └── CATEGORY: 'NewsCategoryList'
+│   │   │   └── DETAIL: 'NewsDetail'
+│   │   └── VIDEOS...
+│   │
+│   └── USER...
+│
+├── TYPE DEFINITIONS
+│   ├── RootStackParamList
+│   │   ├── Maps route names to params
+│   │   └── Enforces type safety
+│   └── Helper Types (AppRoute, RouteParams)
+│
+└── DEEP LINKING
+    ├── Path mappings
+    └── Parameter parsers

@@ -1,0 +1,65 @@
+{
+"home":"home",
+   "featured":"ሓደሽቲ ",
+
+   "tigrai-tv":"ትግራይ ቲቪ",
+   "tigrai tv":"ትግራይ ቲቪ",
+
+
+     "FM Tigrai 98.0":"ኤፍ ኤም ትግራይ 98.0",
+  "Radio Tigrai ":"ሬድዮ ትግራይ",
+
+   "news":"ዜና",
+   "News":"ዜና",
+   "Program":"መደብ",
+   "Programs":"መደባት",
+   "Sport":"ስፖርት",
+   "Podcast":"ፖድካስት",
+   "podcast":"ፖድካስት",
+   "Stream":"ፈነወ",
+   "stream":"ፈነወ",
+
+   "Economy":"ኢኮኖሚይ",
+   "Business":"ቢዝነስ",
+
+
+   "culture":"ባህሊ",
+   "politics":"ፖሊቲክስ",
+
+   "Technology":"ቴክኖሎጂ",
+   "Entertainment":"መዘናግዒ",
+   "entertainment":"መዘናግዒ",
+   "Documentary":"ዶክመንተሪ",
+
+   "Treka metshaf":"ትረካ መፅሓፍ",
+   "Negarit hiwot":"ነገረ ሂወት",
+   "Negere hiwot":"ነገረ ሂወት",
+   "Liela":"ሌላ",
+   "Bandebotom":"ብኣንደቦቶም",
+   "Wegawi tshuf":"ወግዓዊ ፅሑፍ",
+   "Lfnti hasab":"ልፍንቲ ሓሳብ",
+   "Qnyat tigrai":"ቅንያት ትግራይ ",
+   "Hgn fthn":"ሕግን ፍትሕን",
+   "Temokro":"ተሞክሮ",
+   "Tezbti":"ትዕዝብቲ",
+
+   "Trgum eta derfi":"ትርጉም እታ ደርፊ ",
+   "Meretsa derfi":"መረፃ ደርፊ",
+   "Quanqua musika":"ቋንቋ ሙዚቃ",
+   "Hton melsn":"ሕቶን መልስን",
+
+   "fact-check":"ዘጣለልናዮ ሓቒ",
+
+   "Local News":"ዜና ውሽጢ ዓዲ",
+   "World News":"ዜና ወጻኢ",
+   "international-news":"ዜና ወጻኢ",
+   
+
+
+   "sci-tech":"ሳይነስን ቴክኖሎጂ",
+
+    "meta": {
+    "last_updated": "2023-07-20",
+    "author": "Translation Team"
+  }
+  }

@@ -1,0 +1,97 @@
+{
+    "welcome": "Wellcome to TMMApp",
+    "tmma": "ኤመሓት",
+    "Tigrai TV":"ቲቪ",
+    "Radio Tigrai":"ሬድዮ",
+    "selectChannel":"ሚድያ ይምረፁ",
+    "close":"ይዕፀዉ",
+    "categories": {
+      "news": "News",
+      "sports": "Sports"
+    },
+    "userGreeting": "Hello, {{name}}!",
+    "pluralExample": {
+      "one": "You have {{count}} message",
+      "other": "You have {{count}} messages"
+    },
+ 
+    "about": "About",
+    "help": "Help",
+    "contact": "Contact",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "language": "Language",
+    "feedback": "Feedback",
+    "notifications": "Notifications",
+    "search": "Search",
+    "favorites": "Favorites",
+    "share": "የቓልሑ",
+    "logout": "Logout",
+    "login": "Login",
+    "register": "Register",
+    "profile": "Profile",
+    "home": "Home",
+
+    "news": "ዜና",
+    "tv": "ቴሌቪዥን",
+    "more": "ካልኦት",
+
+    "by":"አሰናዳኢ",
+
+    "related":"ተዛማዲ",
+    "visit":"ይጎብንዩ",
+
+    "unknown":"አይተገለፀን",
+
+    "Streaming since":"ካብ",
+    
+    "live":"ቐጥታ",
+    "liveon":"ቐጥታ",
+    "playingon":"ዝፃወት ዘሎ",
+
+    "noData":"ሓበሬታ ኣይተረኸበን",
+
+    "connectionStatus":null,
+    "conError":"ርኽብ የለን",
+    "conErrorDesc":"",
+    "conErrorOpti":"ርኽብ ኢንተርኔት  ምህላው የረጋግፁ",
+    "conErrorOptii":"ዳግም ይሞኽሩ",
+    "conErrorTry":"ዳግም ይሞኽሩ",
+    "conErrorTryDesc":"ዝስዕቡ የረጋግፁ",
+
+    "conWarning":"",
+    "conSucess":"",
+
+    "contactUsDes":"ብኣማራፂ ይርኸቡና",
+
+    "website":"ድሕረ ገፅ",
+    "facebook":"ፊስቡኽ",
+    "instagram":"ኢንስታግራም",
+    "youtube":"ዮቱብ",
+    "tiktok":"ቲክቶክ",
+    "x":"ኤክስ",
+
+    "timeUnits": {
+    "hours": "ሰዓታት",
+    "hour": "ሰዓት",
+    "minutes": "ደቓይቕ",
+    "minute": "ደቒቓ",
+    "seconds": "ሰኮንድ",
+    "second": "ሰኮንድ",
+      "day":"መዓልቲ",
+      "days":"መዓልቲ",
+    "weeks": "ሰሙናት",
+    "week": "ሰሙን",
+    "month": "ወርሒ",
+    "months": "ኣዋርሕ"
+  },
+
+  "timeSuffix": {
+    "ago": "ቕድሚ"
+  },
+
+    "meta": {
+    "last_updated": "2023-07-20",
+    "author": "Translation Team"
+  }
+  }

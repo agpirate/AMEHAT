@@ -1,0 +1,64 @@
+[user]
+    name = Your Name
+    email = your.email@company.com
+    signingkey = YOUR_GPG_KEY_ID
+
+[core]
+    editor = code --wait  # VS Code as default editor
+    autocrlf = input
+    excludesfile = ~/.gitignore_global
+
+[init]
+    defaultBranch = main
+
+[pull]
+    rebase = false
+
+[push]
+    autoSetupRemote = true
+
+[commit]
+    gpgsign = true  # Sign commits for security
+
+[gpg]
+    program = gpg
+
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+
+[alias]
+    # 🔄 Daily workflow aliases
+    co = checkout
+    br = branch
+    ci = commit
+    st = status
+    df = diff
+    dc = diff --cached
+    last = log -1 HEAD
+    
+    # 📊 Enhanced logging
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+    
+    # 🧹 Cleanup aliases
+    cleanup = "!git branch --merged main | grep -v 'main' | xargs git branch -d"
+    prune-remote = "!git fetch origin --prune && git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -d"
+    
+    # 🔍 Inspection aliases
+    who = shortlog -s --
+    files = ls-files
+    ignored = ls-files --others -i --exclude-standard
+    
+    # 🚀 Workflow aliases
+    undo = reset --soft HEAD~1
+    amend = commit --amend --no-edit
+    wip = !git add -A && git commit -m \"WIP\"
+    unwip = !git log -n 1 | grep -q -c \"WIP\" && git reset HEAD~1
+    
+    # 🎯 Branch management
+    recent = for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname:short)' refs/heads
+    delete-merged = "!f() { git checkout $1 && git branch --merged | grep -v \"\\*\" | xargs -n 1 git branch -d; }; f"

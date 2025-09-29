@@ -1,0 +1,15 @@
+{
+    "headlines": {
+      "title": "Latest Headlines",
+      "view_all": "View All"
+    },
+    "article": {
+      "read_more": "Read More",
+      "minutes_read": "{{count}} min read"
+    },
+
+    "_meta": {
+    "last_updated": "2023-07-20",
+    "author": "Translation Team"
+  }
+  }

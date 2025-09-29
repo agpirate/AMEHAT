@@ -1,0 +1,18 @@
+
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run SAST (Static Application Security Testing)
+        uses: github/codeql-action/analyze@v2
+
+      - name: Dependency vulnerability scan
+        run: npm audit
+
+      - name: Container vulnerability scan
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: 'my-app:latest'

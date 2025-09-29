@@ -1,0 +1,32 @@
+
+
+/* bg backdrops coloring -- [ (color-shadow)/events, */
+.bgd-flat{
+    background-color: 'transparent';
+    backdrop-filter: var(--flat);transition: backdrop-filter var(--cssTransition-slow);
+    /* text-shadow: 0px 0px 0px  var(--tr); */
+}
+.bgd-xxs{    background-color: 'transparent';
+    backdrop-filter: blur( var(--blurxxs));transition: backdrop-filter var(--cssTransition-slow);
+    /* text-shadow: 0px 0px 0px  var(--tr); */
+}
+.bgd-xs{    background-color: 'transparent';
+    backdrop-filter: blur( var(--blurxs));transition: backdrop-filter var(--cssTransition-slow);
+    /* text-shadow: 0px 0px 0px  var(--tr); */
+}
+.bgd-sm{    background-color: 'transparent';
+    backdrop-filter: blur( var(--blursm));transition: backdrop-filter var(--cssTransition-slow);
+    /* text-shadow: 0px 0px 0px  var(--tr); */
+}
+.bgd-md{    background-color: 'transparent';
+    backdrop-filter: blur( var(--blurmd));transition: backdrop-filter var(--cssTransition-slow);
+    /* text-shadow: 0px 0px 0px  var(--tr); */
+}
+.bgd-lg{    background-color: 'transparent';
+    backdrop-filter: blur( var(--blurlg));transition: backdrop-filter var(--cssTransition-slow);
+    /* text-shadow: 0px 0px 0px  var(--tr); */
+}
+.bgd-xl{    background-color: 'transparent';
+    backdrop-filter: blur( var(--blurxl));transition: backdrop-filter var(--cssTransition-slow);
+    /* text-shadow: 0px 0px 0px  var(--tr); */
+}

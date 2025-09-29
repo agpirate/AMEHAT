@@ -1,0 +1,70 @@
+{
+
+
+   "home":"home",
+   "back":"back",
+
+   "featured":"featured",
+   "Featured":"featured",
+   "latest":"Featured",
+
+   "sport":"sport",
+   "Sport":"sport",
+   "local-sport":"local sport",
+   "Spoort-local":"local sport",
+   "world-sport":"world sport",
+   "international-sport":"international sport",
+   "Sport-international":"international sport",
+    
+   "economy":"Economy",
+   "Business":"Business",
+   "culture":"Culture",
+   "politics":"Politics",
+   "Fact Check":"fact check",
+   "technology":"Technology",
+   "entertainment":"Entertainment",
+   "Health":"Health",
+   "science":"Science",
+   "Science and Technology":"Science",
+   "music":"Music",
+   "weather-tigrai":"Weather Tigrai",
+   "Tigrai Weather":"Tigrai Weather",
+   "weather tigrai":"Tigrai Weather",
+   "tigrai weather":"Tigrai Weather",
+   "weather":"Weather",
+   "weathert":"Tigrai Weather",
+
+   "news":"News",
+   "Local News":"local news",
+   "World news":"world news",
+   "World News":"world news",
+   "International News":"international news",
+   "breakingNews":"breaking news",
+   "latestNews":"latest news",
+
+   "topStories":"top stories",
+   "featuredArticles":"featured articles",
+   "mostRead":"most read",
+   "mostCommented":"most commented",
+   "editorials":"editorials",
+   "opinion":"opinion",
+   "analysis":"analysis",
+   "interviews":"interviews",
+   "reports":"reports",
+   "investigations":"investigations",
+   "pressRelease":"press release",
+   "pressConference":"press conference",
+   "pressBriefing":"press briefing",
+   "pressStatement":"press statement",
+   "pressReleaseDetails":"press release details",
+   "pressConferenceDetails":"press conference details",
+   "pressBriefingDetails":"press briefing details",
+   "pressStatementDetails":"press statement details",
+   "newsCategories":"news categories",
+   "newsCategory":"news category",     
+
+    "_meta": {
+    "last_updated": "2023-07-20",
+    "author": "Translation Team"
+  }
+  }

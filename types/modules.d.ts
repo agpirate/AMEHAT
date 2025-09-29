@@ -1,0 +1,10 @@
+declare module '@/*';
+declare module '@components/*';
+declare module '@utils/*';
+declare module '@assets/*';
+declare module '@screens/*';
+declare module '@navigation/*';
+declare module '@store/*';
+declare module '@services/*';
+declare module '@hooks/*';
+declare module '@types/*';

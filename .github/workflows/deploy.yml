@@ -1,0 +1,39 @@
+# .github/workflows/deploy.yml
+name: Deploy with Stages
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  # Stage 1: Development deployment
+  deploy-dev:
+    runs-on: ubuntu-latest
+    environment: development
+    steps:
+      - name: Deploy to development
+        run: npm run deploy:dev
+
+  # Stage 2: Staging deployment (manual approval)
+  deploy-staging:
+    runs-on: ubuntu-latest
+    environment: staging
+    needs: deploy-dev
+    steps:
+      - name: Wait for approval
+        uses: trstringer/manual-approval@v1
+        with:
+          secret: ${{ github.TOKEN }}
+          approvers: team-lead,qa-lead
+
+      - name: Deploy to staging
+        run: npm run deploy:staging
+
+  # Stage 3: Production deployment
+  deploy-prod:
+    runs-on: ubuntu-latest
+    environment: production
+    needs: deploy-staging
+    steps:
+      - name: Deploy to production
+        run: npm run deploy:prod

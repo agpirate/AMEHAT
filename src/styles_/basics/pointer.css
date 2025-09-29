@@ -1,0 +1,11 @@
+
+
+.cursor-pointer{
+    cursor:pointer;
+}
+.cursor-loading{
+    cursor:progress;
+}
+.cursor-normal{
+    cursor:auto;
+}

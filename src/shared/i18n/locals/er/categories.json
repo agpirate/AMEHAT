@@ -1,0 +1,17 @@
+{
+    "welcome": "__Welcome to TMMA",
+    "categories": {
+      "news": "News",
+      "sports": "Sports"
+    },
+    "userGreeting": "Hello, {{name}}!",
+    "pluralExample": {
+      "one": "You have {{count}} message",
+      "other": "You have {{count}} messages"
+    },
+
+    "_meta": {
+    "last_updated": "2023-07-20",
+    "author": "Translation Team"
+  }
+  }

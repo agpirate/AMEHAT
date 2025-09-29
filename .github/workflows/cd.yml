@@ -1,0 +1,76 @@
+
+name: React Native CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+jobs:
+  quality-checks:
+    name: Quality Checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Type checking
+        run: npx tsc --noEmit
+        
+      - name: Run tests
+        run: npm test -- --coverage --watchAll=false
+        
+      - name: Lint code
+        run: npm run lint
+        
+      - name: Build TypeScript
+        run: npm run build
+
+  bundle-check:
+    name: Bundle Verification
+    runs-on: ubuntu-latest
+    needs: quality-checks
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Create Android bundle
+        run: |
+          npx react-native bundle \
+            --platform android \
+            --dev false \
+            --entry-file index.js \
+            --bundle-output ./build/android/bundle.js \
+            --assets-dest ./build/android/
+            
+      - name: Create iOS bundle
+        run: |
+          npx react-native bundle \
+            --platform ios \
+            --dev false \
+            --entry-file index.js \
+            --bundle-output ./build/ios/bundle.js \
+            --assets-dest ./build/ios/
+            
+      - name: Verify bundle sizes
+        run: |
+          echo "Android bundle size: $(stat -f%z ./build/android/bundle.js) bytes"
+          echo "iOS bundle size: $(stat -f%z ./build/ios/bundle.js) bytes"

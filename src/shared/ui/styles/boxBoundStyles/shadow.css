@@ -1,0 +1,326 @@
+/* ------side-shift (lr_+x | tb_+y) [ size (flat-xl) ;  //horizontal & vertical shift
+         blurSize(flat-xl) ;   //
+         shadowSize(flat-xl); //default 0 ( mean box's border) 
+         color( main theme-color ) ; 
+         IN/OUT-----[ noEvent]---- */
+
+/* allside - size ( xxs;xl ) ; color ; IN/OUT */
+/* ----- xxs ------- */
+/* IN */
+.shadow-xxs-darkIn{
+    box-shadow: var(--null) var(--null) var(--xxs) var(--xxs) var(--dark) inset,
+                var(--null) var(--null) var(--xxs) var(--xxs) var(--dark) inset;
+}
+.shadow-xxs-grey25In{
+    box-shadow: var(--null) var(--null) var(--xxs) var(--xxs)  var(--grey25) inset,
+    var(--null) var(--null) var(--xxs) var(--xxs)  var(--grey25) inset;
+}
+.shadow-xxs-grey50In{
+    box-shadow: var(--null) var(--null) var(--xxs) var(--xxs)  var(--grey50) inset,
+    var(--null) var(--null) var(--xxs) var(--xxs)  var(--grey50) inset;
+}
+.shadow-xxs-grey75In{
+    box-shadow: var(--null) var(--null) var(--xxs) var(--xxs)  var(--grey75) inset,
+    var(--null) var(--null) var(--xxs) var(--xxs)  var(--grey75) inset;
+}
+.shadow-xxs-grey100In{
+    box-shadow: var(--null) var(--null) var(--xxs) var(--xxs)  var(--grey100) inset,
+    var(--null) var(--null) var(--xxs) var(--xxs)  var(--grey100) inset;
+}
+.shadow-xxs-greyIn{
+    box-shadow: var(--null) var(--null) var(--xxs) var(--xxs)  var(--grey) inset,
+    var(--null) var(--null) var(--xxs) var(--xxs)  var(--grey) inset;
+}
+
+.shadow-xxs-grey150In{
+    box-shadow: var(--null) var(--null) var(--xxs) var(--xxs)  var(--grey150) inset,
+    var(--null) var(--null) var(--xxs) var(--xxs)  var(--grey150) inset;
+}
+.shadow-xxs-grey175In{
+    box-shadow: var(--null) var(--null) var(--xxs) var(--xxs)  var(--grey175) inset,
+    var(--null) var(--null) var(--xxs) var(--xxs)  var(--grey175) inset;
+}
+.shadow-xxs-grey200In{
+    box-shadow: var(--null) var(--null) var(--xxs) var(--xxs)  var(--grey200) inset,
+    var(--null) var(--null) var(--xxs) var(--xxs)  var(--grey200) inset;
+}
+.shadow-xxs-grey225In{
+    box-shadow: var(--null) var(--null) var(--xxs) var(--xxs)  var(--grey225) inset,
+    var(--null) var(--null) var(--xxs) var(--xxs)  var(--grey225) inset;
+}
+.shadow-xxs-darkIn{
+    box-shadow: var(--null) var(--null) var(--xxs) var(--xxs)  var(--dark) inset,
+    var(--null) var(--null) var(--xxs) var(--xxs)  var(--dark) inset;
+}
+
+.shadow-xxs-systemIn{
+    box-shadow: var(--null) var(--null) calc(1*var(--xxs)) var(--system) ,
+    var(--null) var(--null) var(--xxs) var(--system) ;
+}
+/* OUT */
+
+.shadow-xxs-darkOUT{
+    box-shadow: var(--null) var(--null) calc(1*var(--xxs)) var(--xxs)  var(--dark) ,
+    var(--null) var(--null) var(--xxs) var(--xxs)  var(--dark) ;
+}
+.shadow-xxs-greyOut{
+    box-shadow: var(--null) var(--null) var(--xxs)  var(--xxs)  var(--grey) ,
+    var(--null) var(--null) var(--xxs) var(--xxs)  var(--grey) ;
+}
+.shadow-xxs-grey250OUT{
+    box-shadow: var(--null) var(--null) var(--xxs) var(--xxs)  var(--grey25) ,
+    var(--null) var(--null) var(--xxs) var(--xxs)  var(--grey25) ;
+}
+.shadow-xxs-grey50OUT{
+    box-shadow: var(--null) var(--null) var(--xxs) var(--xxs)  var(--grey50) ,
+    var(--null) var(--null) var(--xxs) var(--xxs)  var(--grey50) ;
+}
+.shadow-xxs-grey75OUT{
+    box-shadow: var(--null) var(--null) var(--xxs) var(--xxs)  var(--grey75) ,
+    var(--null) var(--null) var(--xxs) var(--xxs)  var(--grey75) ;
+}
+.shadow-xxs-grey100OUT{
+    box-shadow: var(--null) var(--null) var(--xxs) var(--xxs)  var(--grey100) ,
+    var(--null) var(--null) var(--xxs) var(--xxs)  var(--grey100) ;
+}
+.shadow-xxs-grey150OUT{
+    box-shadow: var(--null) var(--null) var(--xxs) var(--xxs)  var(--grey150) ,
+    var(--null) var(--null) var(--xxs) var(--xxs)  var(--grey150) ;
+}
+.shadow-xxs-grey175OUT{
+    box-shadow: var(--null) var(--null) var(--xxs) var(--xxs)  var(--grey175) ,
+    var(--null) var(--null) var(--xxs) var(--xxs)  var(--grey175) ;
+}
+.shadow-xxs-grey200OUT{
+    box-shadow: var(--null) var(--null) var(--xxs) var(--xxs)  var(--grey200) ,
+                var(--null) var(--null) var(--xxs) var(--xxs)  var(--grey200) ;
+}
+.shadow-xxs-grey225OUT{
+    box-shadow: var(--null) var(--null) var(--xxs) var(--xxs)  var(--grey225) ,
+    var(--null) var(--null) var(--xxs) var(--xxs)  var(--grey225) ;
+}
+.shadow-xxs-lightOUT{
+    box-shadow: var(--null)  var(--null) var(--xxs) var(--xxs)  var(--light);
+}
+
+.shadow-xxs-systemOUT{
+    box-shadow: var(--null) var(--null) calc(var(--xxs)) var(--system) ,
+    var(--null) var(--null) var(--xxs) var(--system) ;
+}
+.shadow-xxs-system-secondaryOUT{
+    box-shadow: var(--null) var(--null) calc(var(--xxs)) var(--system-secondary) ,
+    var(--null) var(--null) var(--xxs) var(--system-secondary) ;
+}
+
+/* ----- xs ------- */
+/* IN */
+
+.shadow-xs-darkIn{
+    box-shadow: calc(1*var(--xs)) calc(1*var(--xs)) calc(1*var(--xs)) var(--xxs)  var(--dark) inset,
+    calc(1*var(--xs)) calc(1*var(--xs)) var(--xs) var(--xxs)  var(--xxs)  var(--dark) inset;
+}
+.shadow-xs-greyIn{
+    box-shadow: calc(1*var(--xs)) calc(1*var(--xs)) calc(1*var(--xs)) var(--grey) inset,
+    calc(1*var(--xs)) calc(1*var(--xs)) var(--xs) var(--grey) inset;
+}
+.shadow-xs-grey150In{
+    box-shadow: calc(1*var(--xs)) calc(1*var(--xs)) calc(1*var(--xs)) var(--grey150) inset,
+    calc(1*var(--xs)) calc(1*var(--xs)) var(--xs) var(--grey150) inset;
+}
+.shadow-xs-grey175In{
+    box-shadow: calc(1*var(--xs)) calc(1*var(--xs)) calc(1*var(--xs)) var(--grey175) inset,
+    calc(1*var(--xs)) calc(1*var(--xs)) var(--xs) var(--grey175) inset;
+}
+/* OUT */
+.shadow-xs-greyOut{
+    box-shadow: calc(1*var(--xs)) calc(1*var(--xs)) calc(1*var(--xs)) var(--grey) ,
+    calc(1*var(--xs)) calc(1*var(--xs)) var(--xs) var(--grey) ;
+}
+.shadow-xs-grey150In{
+    box-shadow: calc(1*var(--xs)) calc(1*var(--xs)) calc(1*var(--xs)) var(--grey150) ,
+    calc(1*var(--xs)) calc(1*var(--xs)) var(--xs) var(--grey150) ;
+}
+.shadow-xs-grey175In{
+    box-shadow: calc(1*var(--xs)) calc(1*var(--xs)) calc(1*var(--xs)) var(--grey175) ,
+    calc(1*var(--xs)) calc(1*var(--xs)) var(--xs) var(--grey175) ;
+}
+
+
+/* ----- sm ------- */
+/* IN */
+.shadow-sm-greyIn{
+    box-shadow: calc(var(--sm)) calc(var(--sm)) calc(1*var(--sm)) var(--grey) inset,
+    calc(1*var(--sm)) calc(1*var(--sm)) var(--sm) var(--grey) inset;
+}
+.shadow-sm-grey150In{
+    box-shadow: calc(var(--sm)) calc(var(--sm)) var(--grey150) inset,
+    calc(1*var(--sm)) calc(1*var(--sm)) var(--sm) var(--grey150) inset;
+}
+.shadow-sm-grey175In{
+    box-shadow: calc(var(--sm)) calc(var(--sm)) calc(var(--sm))  var(--grey175) inset,
+                calc(1*var(--sm)) calc(1*var(--sm)) var(--sm) var(--grey175) inset;
+}
+/* OUT */
+.shadow-sm-greyOut{
+    box-shadow: calc(var(--sm)) calc(var(--sm)) calc(1*var(--sm)) var(--grey) ,
+    calc(1*var(--sm)) calc(1*var(--sm)) var(--sm) var(--grey) ;
+}
+.shadow-sm-grey150In{
+    box-shadow: calc(var(--sm)) calc(var(--sm)) var(--grey150) ,
+    calc(1*var(--sm)) calc(1*var(--sm)) var(--sm) var(--grey150) ;
+}
+.shadow-sm-grey175In{
+    box-shadow: calc(var(--sm)) calc(var(--sm))  calc(var(--sm)) var(--grey175) ,
+    calc(1*var(--sm)) calc(1*var(--sm)) var(--sm) var(--grey175) ;
+}
+
+
+/* ----- md ------- */
+/* IN */
+.shadow-md-greyIn{
+    box-shadow: calc(var(--md)) calc(var(--md)) calc(1*var(--md)) var(--grey) inset,
+    calc(1*var(--md)) calc(1*var(--md)) var(--md) var(--grey) inset;
+}
+.shadow-md-grey150In{
+    box-shadow: calc(var(--md)) calc(var(--md)) calc(1*var(--md)) var(--grey150) inset,
+    calc(1*var(--md)) calc(1*var(--md)) var(--md) var(--grey150) inset;
+}
+.shadow-md-grey175In{
+    box-shadow: calc(var(--md)) calc(var(--md)) calc(1*var(--md)) var(--grey175) inset,
+    calc(1*var(--md)) calc(1*var(--md)) var(--md) var(--grey175) inset;
+}
+
+/* OUT */
+.shadow-md-greyOut{
+    box-shadow: calc(var(--md)) calc(var(--md)) calc(1*var(--md)) var(--grey) ,
+    calc(1*var(--md)) calc(1*var(--md)) var(--md) var(--grey) ;
+}
+.shadow-md-grey150In{
+    box-shadow: calc(var(--md)) calc(var(--md)) calc(1*var(--md)) var(--grey150) ,
+    calc(1*var(--md)) calc(1*var(--md)) var(--md) var(--grey150) ;
+}
+.shadow-md-grey175In{
+    box-shadow: calc(var(--md)) calc(var(--md)) calc(1*var(--md)) var(--grey175) ,
+    calc(1*var(--md)) calc(1*var(--md)) var(--md) var(--grey175) ;
+}
+
+/* ----- lg ------- */
+/* IN */
+.shadow-lg-greyIn{
+    box-shadow: calc(1*var(--lg)) calc(1*var(--lg)) var(--grey) inset,
+    calc(1*var(--lg)) calc(1*var(--lg)) var(--lg) var(--grey) inset;
+}
+.shadow-lg-grey150In{
+    box-shadow: calc(1*var(--lg)) calc(1*var(--lg)) var(--grey150) inset,
+    calc(1*var(--lg)) calc(1*var(--lg)) var(--lg) var(--grey150) inset;
+}
+.shadow-lg-grey175In{
+    box-shadow: calc(1*var(--lg)) calc(1*var(--lg)) var(--grey175) inset,
+    calc(1*var(--lg)) calc(1*var(--lg)) var(--lg) var(--grey175) inset;
+}
+/* OUT */
+.shadow-lg-greyOut{
+    box-shadow: calc(1*var(--lg)) calc(1*var(--lg)) var(--grey) ,
+    calc(1*var(--lg)) calc(1*var(--lg)) var(--lg) var(--grey) ;
+}
+.shadow-lg-grey150In{
+    box-shadow: calc(1*var(--lg)) calc(1*var(--lg)) var(--grey150) ,
+    calc(1*var(--lg)) calc(1*var(--lg)) var(--lg) var(--grey150) ;
+}
+.shadow-lg-grey175In{
+    box-shadow: calc(1*var(--lg)) calc(1*var(--lg)) var(--grey175) ,
+    calc(1*var(--lg)) calc(1*var(--lg)) var(--lg) var(--grey175) ;
+}
+
+
+/* ----- xl ------- */
+/* IN */
+.shadow-xl-greyIn{
+    box-shadow: calc(1*var(--xl)) calc(1*var(--xl)) var(--grey) inset,
+    calc(1*var(--xl)) calc(1*var(--xl)) var(--xl) var(--grey) inset;
+}
+.shadow-xl-grey150In{
+    box-shadow: calc(1*var(--xl)) calc(1*var(--xl)) var(--grey150) inset,
+    calc(1*var(--xl)) calc(1*var(--xl)) var(--xl) var(--grey150) inset;
+}
+.shadow-xl-grey175In{
+    box-shadow: calc(1*var(--xl)) calc(1*var(--xl)) var(--grey175) inset,
+    calc(1*var(--xl)) calc(1*var(--xl)) var(--xl) var(--grey175) inset;
+}
+/* OUT */
+.shadow-xl-greyOut{
+    box-shadow: calc(1*var(--xl)) calc(1*var(--xl)) var(--grey) ,
+    calc(1*var(--xl)) calc(1*var(--xl)) var(--xl) var(--grey) ;
+}
+.shadow-xl-grey150In{
+    box-shadow: calc(1*var(--xl)) calc(1*var(--xl)) var(--grey150) ,
+    calc(1*var(--xl)) calc(1*var(--xl)) var(--xl) var(--grey150) ;
+}
+.shadow-xl-grey175In{
+    box-shadow: calc(1*var(--xl)) calc(1*var(--xl)) var(--grey175) ,
+    calc(1*var(--xl)) calc(1*var(--xl)) var(--xl) var(--grey175) ;
+}
+
+
+/* side ( - size ( xxs;xl ) ; color ; in/out */
+/* ------------ xxs ------- */
+/* ------bottom --- */
+/* ---xxs */
+/* IN */
+.shadow-bxxs-darkIn{
+    box-shadow: calc(1*var(--null)) calc(1*var(--null)) calc(var(--xxs))  var(--xxs)  var(--dark) inset,
+                calc(1*var(--null)) var(--null) calc(var(--xxs))  var(--xxs)  var(--dark) inset ;
+}
+.shadow-bxxs-greyIn{
+    box-shadow: calc(1*var(--null)) calc(1*var(--null)) calc(1*var(--null))  var(--grey) inset,
+                calc(1*var(--null)) var(--null) calc(var(--xxs))  var(--grey) inset ;
+}
+.shadow-bxxs-grey175In{
+    box-shadow: calc(1*var(--null)) calc(1*var(--null)) calc(1*var(--null))  var(--grey175) inset,
+                calc(1*var(--null)) var(--null) calc(var(--xxs)) var(--grey175) inset ;
+}
+.shadow-bxxs-greyIn{
+    box-shadow: calc(1*var(--null)) calc(1*var(--null)) calc(1*var(--null))  var(--grey) inset,
+                calc(1*var(--null)) var(--null) calc(var(--xxs))  var(--grey) inset ;
+}
+/* OUT */
+.shadow-bxxs-grey175OUT{
+    box-shadow: calc(1*var(--null)) calc(1*var(--null)) calc(1*var(--null))  var(--grey175) ,
+                calc(1*var(--null)) var(--null) calc(var(--xxs)) var(--grey175)  ;
+}
+.shadow-bxxs-greyOUT{
+    box-shadow: calc(1*var(--null)) calc(1*var(--null)) calc(1*var(--null))  var(--grey) ,
+                calc(1*var(--null)) var(--null) calc(1*var(--xxs))  var(--grey)  ;
+}
+.shadow-bxxs-grey175OUT{
+    box-shadow: calc(1*var(--null)) calc(1*var(--null)) calc(1*var(--null))  var(--grey175),
+                calc(1*var(--null)) var(--null) calc(1*var(--xxs)) var(--grey175)  ;
+}
+
+/* ---xs */
+/* IN */
+.shadow-bxs-greyIn{
+    box-shadow: calc(1*var(--null)) calc(1*var(--null)) calc(1*var(--null))  var(--grey) inset,
+                calc(1*var(--null)) var(--null) calc(1*var(--xxs)) calc(1*var(--xs)) var(--grey) inset ;
+}
+.shadow-bxs-grey175In{
+    box-shadow: calc(1*var(--null)) calc(1*var(--null)) calc(1*var(--null))  var(--grey175) inset,
+                calc(1*var(--null)) var(--null) calc(1*var(--xxs)) calc(1*var(--xs)) var(--grey175) inset ;
+}
+.shadow-bxs-greyIn{
+    box-shadow: calc(1*var(--null)) calc(1*var(--null)) calc(1*var(--null))  var(--grey) inset,
+                calc(1*var(--null)) var(--null) calc(1*var(--xxs)) calc(1*var(--xs)) var(--grey) inset ;
+}
+/* OUT */
+.shadow-bxs-grey175OUT{
+    box-shadow: calc(1*var(--null)) calc(1*var(--null)) calc(1*var(--null))  var(--grey175) ,
+                calc(1*var(--null)) var(--null) calc(1*var(--xxs)) calc(1*var(--xs)) var(--grey175)  ;
+}
+.shadow-bxs-greyOUT{
+    box-shadow: calc(1*var(--null)) calc(1*var(--null)) calc(1*var(--null))  var(--grey) ,
+                calc(1*var(--null)) var(--null) calc(1*var(--xxs)) calc(1*var(--xs)) var(--grey)  ;
+}
+.shadow-bxs-grey175OUT{
+    box-shadow: calc(1*var(--null)) calc(1*var(--null)) calc(1*var(--null))  var(--grey175),
+                calc(1*var(--null)) var(--null) calc(1*var(--xxs)) calc(1*var(--xs)) var(--grey175)  ;
+}

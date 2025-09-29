@@ -1,3 +1,46 @@
 {
-  "extends": "@react-native/typescript-config/tsconfig.json"
+  "compilerOptions": {
+    "target": "es2020",        // Output JavaScript version
+    "module": "esnext",        // Module system (CommonJS/ES6)
+    "jsx": "react-native",     // How to handle JSX
+    "noEmit": true,           // Critical: Don't output .js files
+    "strict": true,            // Type checking strictness
+
+    "lib": ["es2020"],
+    "moduleResolution": "node",
+    "allowJs": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleDetection": "force",
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@components/*": ["src/components/*"],
+      "@screens/*": ["src/screens/*"],
+      "@utils/*": ["src/shared/utils/*"],
+      "@assets/*": ["src/assets/*"],
+    }
+  },
+  "include": [
+    "src/**/*",
+    "App.tsx",
+  ],
+  "exclude": [
+    "node_modules",
+    "android",
+    "ios",
+    "build",
+    "dist"
+  ]
 }

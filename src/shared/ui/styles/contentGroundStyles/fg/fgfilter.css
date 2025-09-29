@@ -1,0 +1,89 @@
+
+/* color:filter ; opacity ( 1 ) */
+
+.fgc-tr-hovered:hover{
+    filter: var(--tr);
+}
+.fgc-dark-hovered:hover{
+    filter: var(--dark);
+}
+.fgc-grey50-hovered:hover{
+    filter: var(--grey50);
+}
+.fgc-grey-hovered:hover{
+    filter: var(--grey);
+}
+.fgc-grey150-hovered:hover{
+    filter: var(--grey150);
+}
+.fgc-grey175-hovered:hover{
+    filter: var(--grey175);
+}
+.fgc-grey225-hovered:hover{
+    filter: var(--grey225);
+}
+.fgc-light-hovered:hover{
+    filter: var(--light);
+}
+
+/* text coloring -- [ (color-shadow)/events, */
+.fgc-tr{
+    filter: var(--primary);transition:filter var(--cssTransition-slow);
+    /* text-shadow: 0px 0px 0px  var(--tr); */
+}
+.fgc-primary{
+    filter: var(--primary);transition:filter var(--cssTransition-slow);
+    /* text-shadow: 0px 0px 0px  var(--tr); */
+}
+.fgc-secondary{
+    filter: var(--secondary);transition:filter var(--cssTransition-slow);
+    /* text-shadow: 0px 0px 0px  var(--tr); */
+}
+.fgc-dark{
+    filter: var(--dark);transition:filter var(--cssTransition-slow);
+    /* text-shadow: 0px 0px 0px  var(--tr); */
+}
+.fgc-grey50{
+    filter: var(--grey50);transition:filter var(--cssTransition-slow);
+    /* text-shadow: 0px 0px 0px  var(--tr); */
+}
+.fgc-grey{
+    filter: var(--grey);transition:filter var(--cssTransition-slow);
+    /* text-shadow: 0px 0px 0px  var(--tr); */
+}
+.fgc-grey150{
+    filter: var(--grey150);transition:filter var(--cssTransition-slow);
+    /* text-shadow: 0px 0px 0px  var(--tr); */
+}
+.fgc-grey175{
+    filter: var(--grey175);transition:filter var(--cssTransition-slow);
+    /* text-shadow: 0px 0px 0px  var(--tr); */
+}
+.fgc-grey225{
+    filter: var(--grey225);transition:filter var(--cssTransition-slow);
+    /* text-shadow: 0px 0px 0px  var(--tr); */
+}
+.fgc-light{
+    filter: var(--light);transition:filter var(--cssTransition-slow);
+    /* text-shadow: 0px 0px 0px  var(--tr); */
+}
+
+.fgc-negative{
+    filter: var(--nagative);transition:filter var(--cssTransition-slow);
+    /* text-shadow: 0px 0px 0px  var(--tr); */
+}
+.fgc-warning{
+    filter: var(--warning);transition:filter var(--cssTransition-slow);
+    /* text-shadow: 0px 0px 0px  var(--tr); */
+}
+.fgc-info{
+    filter: var(--info);transition:filter var(--cssTransition-slow);
+    /* text-shadow: 0px 0px 0px  var(--tr); */
+}
+.fgc-posetive{
+    filter: var(--posetive);transition:filter var(--cssTransition-slow);
+    /* text-shadow: 0px 0px 0px  var(--tr); */
+}
+
+
+/*  */

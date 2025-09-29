@@ -1,0 +1,85 @@
+
+
+.bgc-tr-hovered:hover{
+    background-color: var(--tr);
+}
+.bgc-dark-hovered:hover{
+    background-color: var(--dark);
+}
+.bgc-grey50-hovered:hover{
+    background-color: var(--grey50);
+}
+.bgc-grey-hovered:hover{
+    background-color: var(--grey);
+}
+.bgc-grey150-hovered:hover{
+    background-color: var(--grey150);
+}
+.bgc-grey175-hovered:hover{
+    background-color: var(--grey175);
+}
+.bgc-grey225-hovered:hover{
+    background-color: var(--grey225);
+}
+.bgc-light-hovered:hover{
+    background-color: var(--light);
+}
+
+/* text coloring -- [ (color-shadow)/events, */
+.bgc-tr{
+    background-color: var(--primary);transition: color var(--cssTransition-slow);
+    /* text-shadow: 0px 0px 0px  var(--tr); */
+}
+.bgc-primary{
+    background-color: var(--primary);transition: color var(--cssTransition-slow);
+    /* text-shadow: 0px 0px 0px  var(--tr); */
+}
+.bgc-secondary{
+    background-color: var(--secondary);transition: color var(--cssTransition-slow);
+    /* text-shadow: 0px 0px 0px  var(--tr); */
+}
+.bgc-dark{
+    background-color: var(--dark);transition: color var(--cssTransition-slow);
+    /* text-shadow: 0px 0px 0px  var(--tr); */
+}
+.bgc-grey50{
+    background-color: var(--grey50);transition: color var(--cssTransition-slow);
+    /* text-shadow: 0px 0px 0px  var(--tr); */
+}
+.bgc-grey{
+    background-color: var(--grey);transition: color var(--cssTransition-slow);
+    /* text-shadow: 0px 0px 0px  var(--tr); */
+}
+.bgc-grey150{
+    background-color: var(--grey150);transition: color var(--cssTransition-slow);
+    /* text-shadow: 0px 0px 0px  var(--tr); */
+}
+.bgc-grey175{
+    background-color: var(--grey175);transition: color var(--cssTransition-slow);
+    /* text-shadow: 0px 0px 0px  var(--tr); */
+}
+.bgc-grey225{
+    background-color: var(--grey225);transition: color var(--cssTransition-slow);
+    /* text-shadow: 0px 0px 0px  var(--tr); */
+}
+.bgc-light{
+    background-color: var(--light);transition: color var(--cssTransition-slow);
+    /* text-shadow: 0px 0px 0px  var(--tr); */
+}
+
+.bgc-negative{
+    background-color: var(--nagative);transition: color var(--cssTransition-slow);
+    /* text-shadow: 0px 0px 0px  var(--tr); */
+}
+.bgc-warning{
+    background-color: var(--warning);transition: color var(--cssTransition-slow);
+    /* text-shadow: 0px 0px 0px  var(--tr); */
+}
+.bgc-info{
+    background-color: var(--info);transition: color var(--cssTransition-slow);
+    /* text-shadow: 0px 0px 0px  var(--tr); */
+}
+.bgc-posetive{
+    background-color: var(--posetive);transition: color var(--cssTransition-slow);
+    /* text-shadow: 0px 0px 0px  var(--tr); */
+}

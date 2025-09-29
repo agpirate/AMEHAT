@@ -1,0 +1,56 @@
+
+/* color:filter ; opacity ( 1 ) */
+
+
+
+.fgd-flat-hovered:hover{
+    filter: var(--tr-color);
+}
+.fgd-xxs-hovered:hover{
+    filter: var(--dark-color);
+}
+.fgd-xs-hovered:hover{
+    filter: var(--grey50-color);
+}
+.fgd-sm-hovered:hover{
+    filter: var(--grey-color);
+}
+.fgd-md-hovered:hover{
+    filter: var(--grey150-color);
+}
+.fgd-lg-hovered:hover{
+    filter: var(--grey175-color);
+}
+.fgd-xl-hovered:hover{
+    filter: var(--light-color);
+}
+
+/* bg backdrops coloring -- [ (color-shadow)/events, */
+.fgd-flat{
+    filter: var(--flat);transition: filter var(--cssTransition-slow);
+    /* text-shadow: 0px 0px 0px  var(--tr); */
+}
+.fgd-xxs{
+    filter: blur( var(--blurxxs));transition: filter var(--cssTransition-slow);
+    /* text-shadow: 0px 0px 0px  var(--tr); */
+}
+.fgd-xs{
+    filter: blur( var(--blurxs));transition: filter var(--cssTransition-slow);
+    /* text-shadow: 0px 0px 0px  var(--tr); */
+}
+.fgd-sm{
+    filter: blur( var(--blursm));transition: filter var(--cssTransition-slow);
+    /* text-shadow: 0px 0px 0px  var(--tr); */
+}
+.fgd-md{
+    filter: blur( var(--blurmd));transition: filter var(--cssTransition-slow);
+    /* text-shadow: 0px 0px 0px  var(--tr); */
+}
+.fgd-lg{
+    filter: blur( var(--blurlg));transition: filter var(--cssTransition-slow);
+    /* text-shadow: 0px 0px 0px  var(--tr); */
+}
+.fgd-xl{
+    filter: blur( var(--blurxl));transition: filter var(--cssTransition-slow);
+    /* text-shadow: 0px 0px 0px  var(--tr); */
+}

@@ -1,0 +1,56 @@
+name: Bundle Analysis
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: '0 0 * * 0'  # Weekly
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Create bundles for analysis
+        run: |
+          # Android bundle with source map
+          npx react-native bundle \
+            --platform android \
+            --dev false \
+            --entry-file index.js \
+            --bundle-output ./analysis/android.bundle \
+            --sourcemap-output ./analysis/android.map
+            
+          # iOS bundle with source map  
+          npx react-native bundle \
+            --platform ios \
+            --dev false \
+            --entry-file index.js \
+            --bundle-output ./analysis/ios.bundle \
+            --sourcemap-output ./analysis/ios.map
+            
+      - name: Analyze bundle size
+        run: |
+          echo "📊 Bundle Size Analysis"
+          echo "======================="
+          echo "Android: $(wc -c < analysis/android.bundle) bytes"
+          echo "iOS: $(wc -c < analysis/ios.bundle) bytes"
+          
+      - name: Upload bundle reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: bundle-analysis
+          path: analysis/
+          retention-days: 30

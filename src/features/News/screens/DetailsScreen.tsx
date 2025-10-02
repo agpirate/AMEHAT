@@ -1,6 +1,6 @@
 import  styleWrap from '../../../shared/hooks/styleWrap.js';
 
-import AnimatedScrollView from '../../../shared/components/scrollViews/AnimatedScrollView'
+import AnimatedScrollView from '@components/scrollViews/AnimatedScrollView'
 import { usePageSettings } from '../../../shared/contexts/pageSettingsProvider';
 
 import React, { useState,useContext,useRef,useEffect } from 'react';

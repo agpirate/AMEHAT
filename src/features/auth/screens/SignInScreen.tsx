@@ -13,16 +13,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import { storesDataObj,storesComputorProvider } from '../../../core/stores/index';
 
 //components 
-import TMMALogoLoaderii from "../../../shared/components/cards/Loader_ii.jsx"
 
-import SignupComponent  from "../components/SignupComponent.tsx"
-import LoginComponent  from "../components/screens/login/SignInFeaturedComponnet.tsx"
 
 import {RenderSignInFeaturedComponet} from "../components/screens/login/render"
 
 import { ROUTES, RootStackParamList } from '../../../core/routes/config/route';
 import { StackScreenProps } from '@react-navigation/stack';
 
+import Config from 'react-native-config';
 // Storing 
 import theStore from "../stores/store"
 
@@ -46,17 +44,6 @@ fetchCrudEndSignAnnonyYield,
 
        }  = theStore()
        
-  const computorProvider = useDispatch<storesComputorProvider>();
-  const { 
-    currentUser,
-    currentAuthMethod,
-    status,
-    error
-  } = useSelector((state:storesDataObj) => state.authStore);
-
-  const activeRegAuthForm = useSelector((state: storesDataObj) => state.authStore.regAuthForm.activeTab);
-
-
 
     
     let {theme} = useContext(ThemeContext);
@@ -112,6 +99,9 @@ fetchCrudEndSignAnnonyYield,
           })) 
       }
           
+          <View style={{height:15}} >
+            <Text style={{color:'red'}}>{Config.API_BASE_URL ?? 'no'}</Text>
+             </View>
      
 {(operation.type === 'fetch') &&  (suboperation === 'signin') && (
   <>
@@ -130,7 +120,7 @@ fetchCrudEndSignAnnonyYield,
                 <TouchableOpacity 
                   style={[authLYTStyles.button, authLYTStyles.anonymousButton]}
                   onPress={() => fetchCrudEndSignAnnonyYield()}
-                  disabled={status =='loading'}
+                  disabled={operation.status =='loading'}
                 >
                   <Text style={[authLYTStyles.buttonText,{backgroundColor:'white',color:'black'}]}>Continue as Guest</Text>
                 </TouchableOpacity>

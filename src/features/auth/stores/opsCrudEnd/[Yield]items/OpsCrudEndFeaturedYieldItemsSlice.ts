@@ -1,7 +1,7 @@
 import { StateCreator } from 'zustand';
 import DataItemsFeaturedTypes from '../../../types/opsCrudEnd/[Yield]Items/OpsCrudEndFeaturedYieldItemsTypes';
 import {  AppStore } from '../../../types';
-import { apiService } from '../../../services/apiService';
+import { apiService } from '../../../services/apiOperations';
 
  const DataItemsFeaturedSlice: StateCreator<AppStore,[],[],DataItemsFeaturedTypes> = (set, get) => ({
 

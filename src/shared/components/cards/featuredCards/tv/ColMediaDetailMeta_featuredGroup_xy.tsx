@@ -4,7 +4,7 @@ import styleWrap from "../../../../../shared/hooks/styleWrap.js"
 import env from "../../../../config/environment.js"
 
 import ttime from "../../../../utils/translateTimeString.js"
-import ImagePlayer from "../../ImagePlayers.js"
+import ImagePlayer from "../../ImagePlayers"
 
 
 

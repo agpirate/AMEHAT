@@ -2,7 +2,7 @@ import { StateCreator } from 'zustand';
 import OpsCrundEndDataItemSignUpTypes from '../../../types/opsCrudEnd/[Yield]Item/OpsCrudEndSignUpYieldItemTypes';
 import {  AppStore } from '../../../types';
 
-import { apiService } from '../../../services/apiService';
+import { apiService } from '../../../services/apiOperations';
 
  const OpsCrundEndDataItemSignUpSlice: StateCreator<AppStore,[],[],OpsCrundEndDataItemSignUpTypes> = (set, get) => ({
   // modelYieldItemGroups,

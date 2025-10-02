@@ -1,7 +1,7 @@
 import styleWrap from "../../../shared/hooks/styleWrap.js"
 // const {boxStyles,borderStyle,radiusStyles,bgcStyles,fontStyles,flexSizes,flexStyles} = styleWrap()
 
-import AnimatedScrollView from '../../../shared/components/scrollViews/AnimatedScrollView'
+import AnimatedScrollView from '@components/scrollViews/AnimatedScrollView'
 import { usePageSettings } from '../../../shared/contexts/pageSettingsProvider';
 
 import React, { useState,useContext,useRef,useEffect } from 'react';
@@ -35,7 +35,6 @@ import { renderLatestComponent,renderCategoryComponent } from '../components/scr
 type HomeScreenProps = StackScreenProps<RootStackParamList,typeof ROUTES.MAIN_TAB.NEWS.LIST.LATEST>;
 
 const RouteScreen = ({ navigation,route }:HomeScreenProps) => {
-
  const {  
     schema,
 
@@ -71,7 +70,7 @@ fetchFeaturedGroupData,
 
 const { t } = useTranslation();
 
-const {boxStyles,borderStyle,radiusStyles,bgcStyles,fontStyles,flexSizes,flexStyles} = styleWrap()
+const {boxStyles,borderStyles,radiusStyles,bgcStyles,fontStyles,flexSizes,flexStyles} = styleWrap()
 
       
   const onPressItem = (
@@ -124,7 +123,6 @@ const {boxStyles,borderStyle,radiusStyles,bgcStyles,fontStyles,flexSizes,flexSty
 
   {/* Main Screen   */}
           <AnimatedScrollView title='latest'  > 
-
           {/* Featured - Latest */}
           {renderLatestComponent(   
           {status: (operation.status ?? 'loading'),

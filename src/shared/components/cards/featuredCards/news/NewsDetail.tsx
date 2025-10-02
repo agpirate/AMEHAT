@@ -4,9 +4,9 @@ import styleWrap from "../../../../../shared/hooks/styleWrap.js"
 import env from "../../../../config/environment.js"
 
 import ttime from "../../../../utils/translateTimeString.js"
-import ImagePlayer from "../../ImagePlayers.js"
+import ImagePlayer from "../../ImagePlayers"
 
-import ContentRenderer from '../../ContentRenderer.js';
+import ContentRenderer from '../../ContentRenderer';
 
 import React, { useMemo,useState,useContext,useRef,useEffect } from 'react';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -26,7 +26,7 @@ const ItemCard = ({item,featureName='common'} : incomingMediaType) =>
 
   const { t } = useTranslation();
 
-const {boxStyles,borderStyle,radiusStyles,bgcStyles,fontStyles,flexSizes,flexStyles} = styleWrap()
+const {boxStyles,borderStyles,radiusStyles,bgcStyles,fontStyles,flexSizes,flexStyles} = styleWrap()
 
         const [dimensions, setDimensions] = useState({ width: 1, height: 1 });
         const windowWidth = useWindowDimensions().width;

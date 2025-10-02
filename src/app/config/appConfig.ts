@@ -1,13 +1,12 @@
 // src/app/config/appConfig.ts
 import {ENV} from './env';
-import Config from 'react-native-config';
 
 export const APP_CONFIG = {
   // App metadata
-  APP_NAME: 'MyBusinessApp',
+  APP_NAME: ENV.rawConfig.APP_NAME,
   APP_VERSION: '1.0.0',
   BUILD_NUMBER: '1',
-
+  
   // Features flags
   FEATURES: {
     DARK_MODE: true,
@@ -19,7 +18,7 @@ export const APP_CONFIG = {
 
   // API Configuration
   API: {
-    BASE_URL: ENV.apiConfig.baseURL,
+    BASE_URL: ENV.apiConfig.systemURL+'/api',
     TIMEOUT: ENV.apiConfig.timeout,
     RETRY_ATTEMPTS: 3,
     VERSION: 'v1',
@@ -44,6 +43,6 @@ export const APP_CONFIG = {
     ENABLED: true,
     DEFAULT_TTL: 5 * 60 * 1000, // 5 minutes
   },
-} as const;
+} ;
 
-export type AppFeatures = keyof typeof APP_CONFIG.FEATURES;
+// export type AppFeatures = keyof typeof APP_CONFIG.FEATURES;

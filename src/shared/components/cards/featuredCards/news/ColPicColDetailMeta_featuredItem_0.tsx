@@ -9,7 +9,7 @@ import env from "../../../../config/environment.js"
 
 import ttime from "../../../../utils/translateTimeString.js"
 
-import ImagePlayer from "../../ImagePlayers.js"
+import ImagePlayer from "../../ImagePlayers"
 
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { View, Text, Image,Dimensions,ActivityIndicator, TouchableOpacity,useWindowDimensions, StyleSheet, ImageBackground } from 'react-native';

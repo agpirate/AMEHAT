@@ -2,7 +2,7 @@ import { StateCreator } from 'zustand';
 import OpsCrudEndSignAnnonyYieldItemType from '../../../types/opsCrudEnd/[Yield]Item/OpsCrudEndSignAnnonyYieldItemType';
 import {  AppStore } from '../../../types';
 
-import { apiService } from '../../../services/apiService';
+import { apiService } from '../../../services/apiOperations';
 
  const OpsCrundEndDataItemSignInSlice: StateCreator<AppStore,[],[],OpsCrudEndSignAnnonyYieldItemType> = (set, get) => ({
   // modelYieldItemGroups,

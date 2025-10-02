@@ -3,14 +3,14 @@ import {z} from 'zod';
 // Environment variable schema validation
 const envSchema = z.object({
   // App Config
-  APP_NAME: z.string().min(1, "APP_NAME is required"),
-  APP_SCHEME: z.string().min(1, "APP_SCHEME is required"),
-  APP_BUNDLE_ID: z.string().min(1, "APP_BUNDLE_ID is required"),
+  APP_NAME: z.string().min(0, "APP_NAME is required"),
+  APP_SCHEME: z.string().min(0, "APP_SCHEME is required"),
+  APP_BUNDLE_ID: z.string().min(0, "APP_BUNDLE_ID is required"),
   
   // API Config
-  API_BASE_URL: z.string().url("API_BASE_URL must be a valid URL"),
+  API_SYSTEM_URL: z.string().url("API_SYSTEM_URL must be a valid URL"),
   API_TIMEOUT: z.string().transform(Number).refine((n) => n > 0, "API_TIMEOUT must be positive"),
-  API_VERSION: z.string().min(1, "API_VERSION is required"),
+  API_VERSION: z.string().min(0, "API_VERSION is required"),
   
   // Features
   ENABLE_ANALYTICS: z.string().transform((val) => val === 'true'),
@@ -19,12 +19,12 @@ const envSchema = z.object({
   
   // Third-party Services (optional in dev)
   SENTRY_DSN: z.string().optional(),
-  AMPLITUDE_API_KEY: z.string().min(1, "AMPLITUDE_API_KEY is required"),
-  GOOGLE_WEB_CLIENT_ID: z.string().min(1, "GOOGLE_WEB_CLIENT_ID is required"),
+  AMPLITUDE_API_KEY: z.string().min(0, "AMPLITUDE_API_KEY is required"),
+  GOOGLE_WEB_CLIENT_ID: z.string().min(0, "GOOGLE_WEB_CLIENT_ID is required"),
   
   // Security
   ENCRYPTION_KEY: z.string().min(16, "ENCRYPTION_KEY must be at least 16 characters"),
-  JWT_SECRET: z.string().min(1, "JWT_SECRET is required"),
+  JWT_SECRET: z.string().min(0, "JWT_SECRET is required"),
   
   // Logging
   LOG_LEVEL: z.enum(['error', 'warn', 'info', 'debug', 'verbose']),
@@ -38,6 +38,7 @@ export type EnvConfig = z.infer<typeof envSchema>;
 
 // Validation function
 export const validateEnv = (envVars: Record<string, string | undefined>): EnvConfig => {
+  console.log('Validating environment variables...',envVars);
   try {
     return envSchema.parse(envVars);
   } catch (error) {

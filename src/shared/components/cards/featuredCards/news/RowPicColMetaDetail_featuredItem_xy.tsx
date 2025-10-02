@@ -5,7 +5,7 @@ import env from "../../../../config/environment.js"
 
 import ttime from "../../../../utils/translateTimeString.js"
 
-import ImagePlayer from "../../ImagePlayers.js"
+import ImagePlayer from "../../ImagePlayers"
 
 import React, { useMemo,useState,useContext,useRef,useEffect } from 'react';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -23,7 +23,7 @@ const ItemCard = ({item,featureName='common'} : incomingMediaType) =>
   {
   const { t } = useTranslation();
 
-const {boxStyles,borderStyle,radiusStyles,bgcStyles,fontStyles,flexSizes,flexStyles} = styleWrap()
+const {boxStyles,borderStyles,radiusStyles,bgcStyles,fontStyles,flexSizes,flexStyles} = styleWrap()
 
   
 

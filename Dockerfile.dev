@@ -1,0 +1,125 @@
+# PURPOSE: Development environment with live-reload
+# USED BY: docker-compose.dev.yml
+# WHEN: During active development
+# RELATIONSHIP: Provides the "base image" for development services
+
+# This file defines what the development environment contains. 
+#It's used by docker-compose.dev.yml to create the actual running service.
+
+FROM node:18-alpine
+# ↑ Base image for consistent Node version
+
+
+RUN apk add --no-cache git openssh-client python3 make g++
+# ↑ Development tools needed for native modules
+
+WORKDIR /app
+# ↑ Container's working directory
+
+COPY package.json package-lock.json ./
+# ↑ Dependency files first for caching
+
+RUN npm ci
+# ↑ Install dependencies in container
+
+COPY . .
+# ↑ Copy source code
+
+EXPOSE 8081
+# ↑ Metro bundler port
+
+CMD ["npm", "run", "start"]
+# ↑ Start Metro bundler (watches for file changes)
+
+
+
+# sudo systemctl stop docker
+# sudo systemctl stop docker.socket
+# sudo systemctl stop containerd
+
+# # Remove Docker packages
+# sudo apt remove --purge docker docker-engine docker.io containerd runc docker-compose
+
+# # Remove all Docker data and configurations
+# sudo rm -rf /var/lib/docker
+# sudo rm -rf /var/lib/containerd
+# sudo rm -rf /etc/docker
+# sudo rm -rf ~/.docker
+# sudo rm -rf /etc/systemd/system/docker.service.d
+
+# # Remove any leftover Docker Compose
+# sudo rm -f /usr/local/bin/docker-compose
+# sudo rm -f /usr/bin/docker-compose
+
+# # Clean up packages
+# sudo apt autoremove --purge
+# sudo apt clean
+
+# sudo groupdel docker
+
+
+# #--------
+#     # Download and run Docker's installation script
+# curl -fsSL https://get.docker.com -o get-docker.sh
+# sudo sh get-docker.sh
+
+# # Alternative: If you prefer manual installation
+# # Add Docker's official GPG key:
+# sudo apt update
+# sudo apt install ca-certificates curl
+# sudo install -m 0755 -d /etc/apt/keyrings
+# sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+# sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+# # Add the repository to Apt sources:
+# echo \
+#   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+#   $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+#   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+# sudo apt update
+
+# # Install Docker
+# sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+# sudo apt install -y \
+#     curl \
+#     wget \
+#     git \
+#     python3 \
+#     python3-pip \
+#     jq
+
+# sudo apt install python3-distutils python3-venv
+
+# # Check if docker compose is available
+# docker compose version
+
+# # If not, install explicitly:
+# sudo apt install docker-compose-plugin
+
+
+# # Create docker group (if it doesn't exist)
+# sudo groupadd docker
+
+# # Add your user to docker group
+# sudo usermod -aG docker $USER
+
+# # Apply group changes without logout
+# newgrp docker
+
+# # Verify you can run Docker without sudo
+# docker ps
+
+
+# docker --version
+# docker compose version
+# docker run hello-world
+
+
+# #auto start docker on boot
+# sudo systemctl status docker
+# sudo systemctl enable docker.service
+# sudo systemctl enable containerd.service
+
+
+

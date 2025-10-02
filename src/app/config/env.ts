@@ -13,7 +13,7 @@ class EnvironmentManager {
       APP_NAME: Config.APP_NAME,
       APP_SCHEME: Config.APP_SCHEME,
       APP_BUNDLE_ID: Config.APP_BUNDLE_ID,
-      API_BASE_URL: Config.API_BASE_URL,
+      API_SYSTEM_URL: Config.API_SYSTEM_URL,
       API_TIMEOUT: Config.API_TIMEOUT,
       API_VERSION: Config.API_VERSION,
       ENABLE_ANALYTICS: Config.ENABLE_ANALYTICS,
@@ -35,7 +35,7 @@ class EnvironmentManager {
     if (this.isDev) {
       console.log('🔧 Environment Configuration:', {
         environment: this.environment,
-        apiBaseUrl: this.config.API_BASE_URL,
+        apiBaseUrl: this.config.API_SYSTEM_URL,
         debugMode: this.config.ENABLE_DEBUG_MODE,
       });
     }
@@ -87,7 +87,7 @@ class EnvironmentManager {
   // API configuration
   get apiConfig() {
     return {
-      baseURL: this.config.API_BASE_URL,
+      systemURL: this.config.API_SYSTEM_URL,
       timeout: this.config.API_TIMEOUT,
       version: this.config.API_VERSION,
       headers: {

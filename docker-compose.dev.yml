@@ -1,0 +1,55 @@
+# PURPOSE: Orchestrates multiple services and their relationships
+# USES: Dockerfile.dev as base image
+# WHEN: You run `docker-compose up`
+# RELATIONSHIP: Uses Dockerfile.dev and adds runtime configuration
+
+
+services:
+  metro-bundler:                # ← Service name
+    build:                      # ← Build from Dockerfile.dev
+      context: .
+      dockerfile: Dockerfile.dev
+    
+    ports:                      # ← Network exposure
+      - "8081:8081"            #   Metro ↔ Host communication
+    
+    volumes:                    # ← File sharing between Host ↔ Container
+      - .:/app                 #   Sync source code (for live reload)
+      - /app/node_modules      #   Isolate container node_modules
+      - metro-cache:/app/.metro-cache
+
+    
+    environment:               # ← Runtime environment variables
+      - ENVFILE=.env.development
+      - CHOKIDAR_USEPOLLING=true  # Enable file watching in Docker
+
+    stdin_open: true
+    tty: true
+
+volumes:
+  metro-cache:
+  
+
+              #--------------------------- docker install
+              #--------------------------- docker start
+
+
+              #--------------------------- run imaging(run dockerfile)  by using [ .yml ] or [ manually using docker commands ]
+
+#   # Build and start (using Docker Compose V2)
+# docker compose -f docker-compose.dev.yml up
+
+# docker ps
+
+# # Or build first, then start
+# docker compose -f docker-compose.dev.yml build
+# docker compose -f docker-compose.dev.yml up
+
+# # Run in background
+# docker compose -f docker-compose.dev.yml up -d
+
+# # View logs
+# docker compose -f docker-compose.dev.yml logs -f
+
+# # Stop services
+# docker compose -f docker-compose.dev.yml down

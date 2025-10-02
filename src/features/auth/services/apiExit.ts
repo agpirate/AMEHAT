@@ -1,18 +1,15 @@
 // src/services/apiClient.ts
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
-import { Platform } from 'react-native';
 
-import { APP_CONFIG } from '@/app/config/appConfig';
+import { Service_Auth_CONFIG } from '@/app/config/app.services.config';
+import { API_CONSTANTS } from "@/app/constants/api.constants"
 
-let   baseURL= Platform.OS === 'android'  ? 'http://196.190.43.162/api'   : 'http://196.190.43.162/api'
-
-console.log('API Base URL:',APP_CONFIG);
 // Configure base API client
 const apiClient: AxiosInstance = axios.create({
-baseURL:APP_CONFIG.API.BASE_URL,
-  timeout: 10000,
+baseURL:Service_Auth_CONFIG.API.GATE_ONE_URL,
+  timeout: Service_Auth_CONFIG.API.TIMEOUT,
   headers: {
-    'Content-Type': 'application/json',
+    'Content-Type': API_CONSTANTS.CONTENT_TYPES.JSON,
   },
 });
  
@@ -46,7 +43,7 @@ apiClient.interceptors.response.use(
 // Generic request function
 const request = async <T>(config: AxiosRequestConfig): Promise<T> => {
   try {
-    console.log('initiating network.',config.params)
+   
 
     const response: AxiosResponse<T> = await apiClient(config);
 

@@ -3,7 +3,9 @@
 & when there is any 
      + push requests over the given listed branches... the file excuted the job listed.. &
      + pull requests over the given listed branches... the file excuted the job listed.. & 
-give results(alerts) to the github account owner [ and this whole watch and excuttions will done by github services]
+
+give results(alerts) to the github account owner [ and this whole watch and excuttions will done by github services.. in
+new virtual system.. that setuped with all dependencies.. ]
 
 ---------------Triggering point
 
@@ -19,10 +21,10 @@ git push origin main
 # 1. GitHub detects the push
 # 2. Looks for .github/workflows/*.yml files
 # 3. Executes the workflow
-
+ 
 # Create Pull Request
 # ⬇️ CI workflow automatically runs
 # ✅ All checks pass
 # ✅ Team reviews code
 # ✅ Merge to main
-# ⬇️ CD workflow automatically deploys
+# ⬇️ CD workflow automatically deploys 

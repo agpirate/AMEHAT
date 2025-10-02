@@ -24,7 +24,7 @@ const VerticalNewsCard = ({item}:incomingMediaType) =>
 
   const { t } = useTranslation();
 
-const {boxStyles,borderStyle,shadowStyles,radiusStyles,bgcStyles,fontStyles,flexSizes,flexStyles} = styleWrap()
+const {boxStyles,borderStyles,shadowStyles,radiusStyles,bgcStyles,fontStyles,flexSizes,flexStyles} = styleWrap()
 
 
     //image loader -

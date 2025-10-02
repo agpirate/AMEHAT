@@ -2,7 +2,7 @@ import { StateCreator } from 'zustand';
 import OpsEndDataItemQueriedTypes  from '../../../types/opsCrudEnd/[Yield]Item/OpsCrudEndQueriedYieldItemsTypes';
 import {  AppStore } from '../../../types';
 
-import { apiService } from '../../../services/apiService';
+import { apiService } from '../../../services/apiOperations';
 
  const DataItemsSlice: StateCreator<AppStore,[],[],OpsEndDataItemQueriedTypes> = (set, get) => ({
   // modelactiveDataItemGroups,

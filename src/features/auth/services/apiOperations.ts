@@ -1,10 +1,11 @@
-import { request } from '../../../shared/services/api/apiClient';
+import { request } from './apiExit';
+
 import {DataItemType} from '../types/[input]Item_Schema/SchemaInputItemTypes';
 import {ApiQueringType} from '../types/quering/apiQuering/ApiQueringTypes';
 import ApiResponseTypes from '../types/quering/apiResponse/ApiResponseTypes';
 import { ApiError } from '../../../shared/types/errors';
 
-const API_BASE_PATH = '/api/auth/login';
+const API_ALL_Gates = '/auth/login';
 
 export const apiService = {
   // Fetch all items with enhanced error handling
@@ -15,7 +16,7 @@ export const apiService = {
         pagination: { total: number; pages: number };
       }>({
         method: 'GET',
-        url: API_BASE_PATH,
+        url: API_ALL_Gates,
         params
       });
       return {
@@ -32,7 +33,7 @@ export const apiService = {
     try {
       return await request<DataItemType>({
         method: 'POST',
-        url: API_BASE_PATH,
+        url: API_ALL_Gates,
         data: item
       });
     } catch (error) {
@@ -44,7 +45,7 @@ export const apiService = {
     try {
       return await request<DataItemType>({
         method: 'POST',
-        url: API_BASE_PATH,
+        url: API_ALL_Gates,
         data: item
       });
     } catch (error) {
@@ -56,7 +57,7 @@ export const apiService = {
     try {
       return await request<DataItemType>({
         method: 'PUT',
-        url: `${API_BASE_PATH}/${id}`,
+        url: `${API_ALL_Gates}/${id}`,
         data: updates
       });
     } catch (error) {
@@ -68,7 +69,7 @@ export const apiService = {
     try {
       await request<void>({
         method: 'DELETE',
-        url: `${API_BASE_PATH}/${id}`
+        url: `${API_ALL_Gates}/${id}`
       });
     } catch (error) {
       throw ApiError.from(error);

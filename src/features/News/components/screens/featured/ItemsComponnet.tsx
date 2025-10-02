@@ -1,9 +1,8 @@
-import styleWrap from "../../../../../shared/hooks/styleWrap.js"
+import styleWrap from "@hooks/styleWrap"
 // const {boxStyles,borderStyle,radiusStyles,bgcStyles,fontStyles,flexSizes,flexStyles} = styleWrap()
 
-import { useProcessItems } from '../../../../../shared/utils/useProcessItems.ts';
+import { useProcessItems } from '@utils/useProcessItems';
 
-import { serviceMeta } from "../../../config/constants/metas.js"
 
 import { useWindowDimensions,Animated,View, Text, TouchableOpacity, StyleSheet, TextInput, Image,StatusBar,ScrollView,FlatList } from 'react-native';
 import { useTranslation } from 'react-i18next';
@@ -11,7 +10,7 @@ import React, {useMemo, useState,useContext,useRef,useEffect } from 'react';
 
 //cards
 // import ItemsListCard from "./cards/verticalViewCard"
-import {RowPicColDetailsMeta,RowPicColMetaDetails,ColPicColDetailsMeta} from "../../../../../shared/components/cards/featuredCards/news/index.js"
+import {RowPicColDetailsMeta,RowPicColMetaDetails,ColPicColDetailsMeta} from "@components/cards/featuredCards/news/index.js"
 
 type Item = {
   id: string | number;
@@ -26,7 +25,6 @@ type ItemComponentProps = {
 export const ItemsComponent :React.FC<ItemComponentProps> = ({data, onPressItem}) => {
     // style provider value
 const {boxStyles,radiusStyles,bgcStyles,fontStyles,flexSizes,flexStyles} = styleWrap()
-
 
     // Process data using hook 
     // console.log(Object.keys(data[0]))

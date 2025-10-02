@@ -4,9 +4,9 @@ import styleWrap from "../../../../../shared/hooks/styleWrap.js"
 import env from "../../../../config/environment.js"
 
 import ttime from "../../../../utils/translateTimeString.js"
-import ImagePlayer from "../../ImagePlayers.js"
+import ImagePlayer from "../../ImagePlayers"
 
-import ContentRenderer from '../../ContentRenderer.js';
+import ContentRenderer from '../../ContentRenderer';
 
 import React, { useMemo,useState,useContext,useRef,useEffect } from 'react';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
